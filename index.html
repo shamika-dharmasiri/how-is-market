@@ -143,6 +143,22 @@
             background: var(--green);
         }
 
+        .worst-banner.level-sell {
+            background: rgba(250, 204, 21, 0.06);
+        }
+
+        .worst-banner.level-sell::before {
+            background: var(--yellow);
+        }
+
+        .worst-banner.level-sell-high {
+            background: rgba(251, 146, 60, 0.08);
+        }
+
+        .worst-banner.level-sell-high::before {
+            background: var(--orange);
+        }
+
         .worst-banner.level--15 {
             background: rgba(250, 204, 21, 0.06);
         }
@@ -190,6 +206,14 @@
             color: var(--red) !important;
         }
 
+        .val-yellow {
+            color: var(--yellow) !important;
+        }
+
+        .val-orange {
+            color: var(--orange) !important;
+        }
+
         .worst-banner__quote {
             margin-top: 16px;
             font-size: 14px;
@@ -197,6 +221,29 @@
             font-style: italic;
             line-height: 1.7;
             white-space: pre-line;
+        }
+
+        /* ═══ Sell Signal Badge ═══ */
+        .sell-signal-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            background: rgba(250, 204, 21, 0.15);
+            color: var(--yellow);
+            border: 1px solid rgba(250, 204, 21, 0.25);
+            margin-top: 6px;
+        }
+
+        .sell-signal-badge.high {
+            background: rgba(251, 146, 60, 0.15);
+            color: var(--orange);
+            border-color: rgba(251, 146, 60, 0.25);
         }
 
         /* ═══ Market Section ═══ */
@@ -266,6 +313,14 @@
 
         .card__indicator.critical {
             background: var(--red);
+        }
+
+        .card__indicator.sell-warn {
+            background: var(--yellow);
+        }
+
+        .card__indicator.sell-danger {
+            background: var(--orange);
         }
 
         .card__header {
@@ -371,21 +426,23 @@
         <div class="hero">
             <div class="hero__badge"><span class="pulse"></span> Live Market Monitor</div>
             <h1>Market Drawdown Dashboard</h1>
-            <p class="hero__sub">Last updated: 2026-05-06 22:12 UTC</p>
+            <p class="hero__sub">Last updated: 2026-05-07 02:37 UTC</p>
         </div>
 
-        <!-- Worst Drawdown Banner -->
+        <!-- Worst Drawdown / Best Rally Banner -->
         
-         <div
-            class="worst-banner level-ok">
-            <div class="worst-banner__label">Worst Drawdown Across All Instruments</div>
-            <div class="worst-banner__value val-red">-7.49%</div>
             
-            <div class="worst-banner__quote">"The big thing about money is that it gives you options. The ability to
-                wait for things to happen, and the ability to say no to things you don't want."
-                — Morgan Housel</div>
             
-    </div>
+            <div class="worst-banner level-ok">
+                <div class="worst-banner__label">Worst Drawdown Across All Instruments</div>
+                <div class="worst-banner__value val-red">-5.12%</div>
+                
+                <div class="worst-banner__quote">"The big thing about money is that it gives you options. The ability to
+                    wait for things to happen, and the ability to say no to things you don't want."
+                    — Morgan Housel</div>
+                
+            </div>
+        
 
     <!-- Market Sections -->
     
@@ -394,15 +451,23 @@
         <div class="cards">
             
             
-             <div class="card"
-                id="card-GSPC">
-                <div class="card__indicator ok"></div>
+            
+            
+            <div class="card" id="card-GSPC">
+                <div class="card__indicator sell-warn"></div>
                 <div class="card__header">
                     <div>
                         <div class="card__ticker">^GSPC</div>
                         <div class="card__name">S&amp;P 500 Index</div>
+                        
+                        <div class="sell-signal-badge ">
+                            ⚠ Be Fearful
+                        </div>
+                        
                     </div>
-                    <div class="card__drawdown val-green">0.0%</div>
+                    
+                    <div class="card__drawdown val-green">+31.36%</div>
+                    
                 </div>
                 <div class="card__stats">
                     <div>
@@ -414,22 +479,34 @@
                         <div class="card__stat-value">$7365.12</div>
                     </div>
                     <div>
+                        <div class="card__stat-label">252d Low</div>
+                        <div class="card__stat-value">$5606.91</div>
+                    </div>
+                    <div>
                         <div class="card__stat-label">As Of</div>
                         <div class="card__stat-value">2026-05-06</div>
                     </div>
                 </div>
-        </div>
-        
+            </div>
             
-             <div class="card"
-                id="card-IXIC">
-                <div class="card__indicator ok"></div>
+            
+            
+            
+            <div class="card" id="card-IXIC">
+                <div class="card__indicator sell-warn"></div>
                 <div class="card__header">
                     <div>
                         <div class="card__ticker">^IXIC</div>
                         <div class="card__name">NASDAQ Composite</div>
+                        
+                        <div class="sell-signal-badge ">
+                            ⚠ Be Fearful
+                        </div>
+                        
                     </div>
-                    <div class="card__drawdown val-green">0.0%</div>
+                    
+                    <div class="card__drawdown val-green">+46.07%</div>
+                    
                 </div>
                 <div class="card__stats">
                     <div>
@@ -441,22 +518,29 @@
                         <div class="card__stat-value">$25838.94</div>
                     </div>
                     <div>
+                        <div class="card__stat-label">252d Low</div>
+                        <div class="card__stat-value">$17689.66</div>
+                    </div>
+                    <div>
                         <div class="card__stat-label">As Of</div>
                         <div class="card__stat-value">2026-05-06</div>
                     </div>
                 </div>
-        </div>
-        
+            </div>
             
-             <div class="card"
-                id="card-DJI">
+            
+            
+            <div class="card" id="card-DJI">
                 <div class="card__indicator ok"></div>
                 <div class="card__header">
                     <div>
                         <div class="card__ticker">^DJI</div>
                         <div class="card__name">Dow Jones Industrial Average</div>
+                        
                     </div>
+                    
                     <div class="card__drawdown val-red">-0.55%</div>
+                    
                 </div>
                 <div class="card__stats">
                     <div>
@@ -468,22 +552,34 @@
                         <div class="card__stat-value">$50188.14</div>
                     </div>
                     <div>
+                        <div class="card__stat-label">252d Low</div>
+                        <div class="card__stat-value">$40829.0</div>
+                    </div>
+                    <div>
                         <div class="card__stat-label">As Of</div>
                         <div class="card__stat-value">2026-05-06</div>
                     </div>
                 </div>
-        </div>
-        
+            </div>
             
-             <div class="card"
-                id="card-VOO">
-                <div class="card__indicator ok"></div>
+            
+            
+            
+            <div class="card" id="card-VOO">
+                <div class="card__indicator sell-warn"></div>
                 <div class="card__header">
                     <div>
                         <div class="card__ticker">VOO</div>
                         <div class="card__name">Vanguard S&amp;P 500 ETF</div>
+                        
+                        <div class="sell-signal-badge ">
+                            ⚠ Be Fearful
+                        </div>
+                        
                     </div>
-                    <div class="card__drawdown val-green">0.0%</div>
+                    
+                    <div class="card__drawdown val-green">+32.94%</div>
+                    
                 </div>
                 <div class="card__stats">
                     <div>
@@ -495,22 +591,34 @@
                         <div class="card__stat-value">$674.66</div>
                     </div>
                     <div>
+                        <div class="card__stat-label">252d Low</div>
+                        <div class="card__stat-value">$507.5</div>
+                    </div>
+                    <div>
                         <div class="card__stat-label">As Of</div>
                         <div class="card__stat-value">2026-05-06</div>
                     </div>
                 </div>
-        </div>
-        
+            </div>
             
-             <div class="card"
-                id="card-QQQ">
-                <div class="card__indicator ok"></div>
+            
+            
+            
+            <div class="card" id="card-QQQ">
+                <div class="card__indicator sell-warn"></div>
                 <div class="card__header">
                     <div>
                         <div class="card__ticker">QQQ</div>
                         <div class="card__name">Invesco NASDAQ-100 ETF</div>
+                        
+                        <div class="sell-signal-badge ">
+                            ⚠ Be Fearful
+                        </div>
+                        
                     </div>
-                    <div class="card__drawdown val-green">0.0%</div>
+                    
+                    <div class="card__drawdown val-green">+45.23%</div>
+                    
                 </div>
                 <div class="card__stats">
                     <div>
@@ -522,22 +630,34 @@
                         <div class="card__stat-value">$695.77</div>
                     </div>
                     <div>
+                        <div class="card__stat-label">252d Low</div>
+                        <div class="card__stat-value">$479.09</div>
+                    </div>
+                    <div>
                         <div class="card__stat-label">As Of</div>
                         <div class="card__stat-value">2026-05-06</div>
                     </div>
                 </div>
-        </div>
-        
+            </div>
             
-             <div class="card"
-                id="card-VTI">
-                <div class="card__indicator ok"></div>
+            
+            
+            
+            <div class="card" id="card-VTI">
+                <div class="card__indicator sell-warn"></div>
                 <div class="card__header">
                     <div>
                         <div class="card__ticker">VTI</div>
                         <div class="card__name">Vanguard Total Stock Market ETF</div>
+                        
+                        <div class="sell-signal-badge ">
+                            ⚠ Be Fearful
+                        </div>
+                        
                     </div>
-                    <div class="card__drawdown val-green">0.0%</div>
+                    
+                    <div class="card__drawdown val-green">+33.16%</div>
+                    
                 </div>
                 <div class="card__stats">
                     <div>
@@ -549,22 +669,29 @@
                         <div class="card__stat-value">$361.86</div>
                     </div>
                     <div>
+                        <div class="card__stat-label">252d Low</div>
+                        <div class="card__stat-value">$271.76</div>
+                    </div>
+                    <div>
                         <div class="card__stat-label">As Of</div>
                         <div class="card__stat-value">2026-05-06</div>
                     </div>
                 </div>
-        </div>
-        
+            </div>
             
-             <div class="card"
-                id="card-IVE">
+            
+            
+            <div class="card" id="card-IVE">
                 <div class="card__indicator ok"></div>
                 <div class="card__header">
                     <div>
                         <div class="card__ticker">IVE</div>
                         <div class="card__name">iShares S&amp;P 500 Value ETF</div>
+                        
                     </div>
-                    <div class="card__drawdown val-green">0.0%</div>
+                    
+                    <div class="card__drawdown val-green">+24.75%</div>
+                    
                 </div>
                 <div class="card__stats">
                     <div>
@@ -576,12 +703,16 @@
                         <div class="card__stat-value">$224.77</div>
                     </div>
                     <div>
+                        <div class="card__stat-label">252d Low</div>
+                        <div class="card__stat-value">$180.18</div>
+                    </div>
+                    <div>
                         <div class="card__stat-label">As Of</div>
                         <div class="card__stat-value">2026-05-06</div>
                     </div>
                 </div>
-        </div>
-        
+            </div>
+            
     </div>
     </div>
     
@@ -590,86 +721,107 @@
         <div class="cards">
             
             
-             <div class="card"
-                id="card-AXJO">
+            
+            <div class="card" id="card-AXJO">
                 <div class="card__indicator ok"></div>
                 <div class="card__header">
                     <div>
                         <div class="card__ticker">^AXJO</div>
                         <div class="card__name">S&amp;P/ASX 200</div>
+                        
                     </div>
-                    <div class="card__drawdown val-red">-5.63%</div>
+                    
+                    <div class="card__drawdown val-red">-3.49%</div>
+                    
                 </div>
                 <div class="card__stats">
                     <div>
                         <div class="card__stat-label">Price</div>
-                        <div class="card__stat-value">$8680.5</div>
+                        <div class="card__stat-value">$8877.2</div>
                     </div>
                     <div>
                         <div class="card__stat-label">252d High</div>
                         <div class="card__stat-value">$9198.6</div>
                     </div>
                     <div>
+                        <div class="card__stat-label">252d Low</div>
+                        <div class="card__stat-value">$8233.5</div>
+                    </div>
+                    <div>
                         <div class="card__stat-label">As Of</div>
-                        <div class="card__stat-value">2026-05-05</div>
+                        <div class="card__stat-value">2026-05-07</div>
                     </div>
                 </div>
-        </div>
-        
+            </div>
             
-             <div class="card"
-                id="card-VGS_AX">
+            
+            
+            <div class="card" id="card-VGS_AX">
                 <div class="card__indicator ok"></div>
                 <div class="card__header">
                     <div>
                         <div class="card__ticker">VGS.AX</div>
                         <div class="card__name">Vanguard MSCI Intl Shares ETF</div>
+                        
                     </div>
-                    <div class="card__drawdown val-red">-3.46%</div>
+                    
+                    <div class="card__drawdown val-red">-2.24%</div>
+                    
                 </div>
                 <div class="card__stats">
                     <div>
                         <div class="card__stat-label">Price</div>
-                        <div class="card__stat-value">$150.0</div>
+                        <div class="card__stat-value">$151.89</div>
                     </div>
                     <div>
                         <div class="card__stat-label">252d High</div>
                         <div class="card__stat-value">$155.37</div>
                     </div>
                     <div>
+                        <div class="card__stat-label">252d Low</div>
+                        <div class="card__stat-value">$132.19</div>
+                    </div>
+                    <div>
                         <div class="card__stat-label">As Of</div>
-                        <div class="card__stat-value">2026-05-06</div>
+                        <div class="card__stat-value">2026-05-07</div>
                     </div>
                 </div>
-        </div>
-        
+            </div>
             
-             <div class="card"
-                id="card-VGE_AX">
+            
+            
+            <div class="card" id="card-VGE_AX">
                 <div class="card__indicator ok"></div>
                 <div class="card__header">
                     <div>
                         <div class="card__ticker">VGE.AX</div>
                         <div class="card__name">Vanguard FTSE Emerging Markets ETF</div>
+                        
                     </div>
-                    <div class="card__drawdown val-red">-1.96%</div>
+                    
+                    <div class="card__drawdown val-red">-0.44%</div>
+                    
                 </div>
                 <div class="card__stats">
                     <div>
                         <div class="card__stat-label">Price</div>
-                        <div class="card__stat-value">$90.99</div>
+                        <div class="card__stat-value">$92.4</div>
                     </div>
                     <div>
                         <div class="card__stat-label">252d High</div>
                         <div class="card__stat-value">$92.81</div>
                     </div>
                     <div>
+                        <div class="card__stat-label">252d Low</div>
+                        <div class="card__stat-value">$78.09</div>
+                    </div>
+                    <div>
                         <div class="card__stat-label">As Of</div>
-                        <div class="card__stat-value">2026-05-06</div>
+                        <div class="card__stat-value">2026-05-07</div>
                     </div>
                 </div>
-        </div>
-        
+            </div>
+            
     </div>
     </div>
     
@@ -678,32 +830,44 @@
         <div class="cards">
             
             
-             <div class="card"
-                id="card-ES3_SI">
-                <div class="card__indicator ok"></div>
+            
+            
+            <div class="card" id="card-ES3_SI">
+                <div class="card__indicator sell-warn"></div>
                 <div class="card__header">
                     <div>
                         <div class="card__ticker">ES3.SI</div>
                         <div class="card__name">SPDR Straits Times Index ETF</div>
+                        
+                        <div class="sell-signal-badge ">
+                            ⚠ Be Fearful
+                        </div>
+                        
                     </div>
-                    <div class="card__drawdown val-red">-1.37%</div>
+                    
+                    <div class="card__drawdown val-red">-0.4%</div>
+                    
                 </div>
                 <div class="card__stats">
                     <div>
                         <div class="card__stat-label">Price</div>
-                        <div class="card__stat-value">$4.97</div>
+                        <div class="card__stat-value">$5.02</div>
                     </div>
                     <div>
                         <div class="card__stat-label">252d High</div>
                         <div class="card__stat-value">$5.04</div>
                     </div>
                     <div>
+                        <div class="card__stat-label">252d Low</div>
+                        <div class="card__stat-value">$3.75</div>
+                    </div>
+                    <div>
                         <div class="card__stat-label">As Of</div>
-                        <div class="card__stat-value">2026-05-05</div>
+                        <div class="card__stat-value">2026-05-07</div>
                     </div>
                 </div>
-        </div>
-        
+            </div>
+            
     </div>
     </div>
     
@@ -712,32 +876,44 @@
         <div class="cards">
             
             
-             <div class="card"
-                id="card-CSE_SP_SL20">
-                <div class="card__indicator ok"></div>
+            
+            
+            <div class="card" id="card-CSE_ASPI">
+                <div class="card__indicator sell-warn"></div>
                 <div class="card__header">
                     <div>
-                        <div class="card__ticker">CSE_SP_SL20</div>
-                        <div class="card__name">S&amp;P Sri Lanka 20</div>
+                        <div class="card__ticker">CSE_ASPI</div>
+                        <div class="card__name">ASPI (Colombo All-Share Price Index)</div>
+                        
+                        <div class="sell-signal-badge ">
+                            ⚠ Be Fearful
+                        </div>
+                        
                     </div>
-                    <div class="card__drawdown val-red">-7.49%</div>
+                    
+                    <div class="card__drawdown val-red">-5.12%</div>
+                    
                 </div>
                 <div class="card__stats">
                     <div>
                         <div class="card__stat-label">Price</div>
-                        <div class="card__stat-value">$6245.13</div>
+                        <div class="card__stat-value">$22739.77</div>
                     </div>
                     <div>
                         <div class="card__stat-label">252d High</div>
-                        <div class="card__stat-value">$6750.5</div>
+                        <div class="card__stat-value">$23967.22</div>
+                    </div>
+                    <div>
+                        <div class="card__stat-label">252d Low</div>
+                        <div class="card__stat-value">$15850.47</div>
                     </div>
                     <div>
                         <div class="card__stat-label">As Of</div>
                         <div class="card__stat-value">2026-05-06</div>
                     </div>
                 </div>
-        </div>
-        
+            </div>
+            
     </div>
     </div>
     
@@ -747,17 +923,20 @@
         <div class="wisdom__icon">📖</div>
         <div class="wisdom__title">Emotional Preparedness</div>
         
-            <div class="wisdom__text">
-                Markets are calm right now. Use this time to reinforce your investment plan, review your allocation,
-                and mentally prepare for the inevitable drawdowns.
-                <br><br>
-                The best investors have a plan ready <strong>before</strong> the storm hits — not during it.
-                Ensure you have 6 months of expenses saved, a tiered capital deployment strategy,
-                and the emotional clarity to act when others panic.
-            </div>
-            
-            <div class="wisdom__attribution">— Inspired by <em>The Psychology of Money</em> by Morgan Housel</div>
-            </div>
+        <div class="wisdom__text">
+            The best performing instruments have rallied up to <strong>+46.07%</strong> from their 252-day lows.
+            <br><br>
+            <em>"Be greedy when others are fearful, be fearful when others are greedy."</em>
+            <br><br>
+            Markets are running strong. Sentiment is positive. This is not a time to panic — but it is
+            a moment to pause and review your allocation.
+            <br><br>
+            Consider trimming positions that have grown overweight. Maintain your cash buffer.
+            <br><strong>Stay disciplined. The plan works in both directions.</strong>
+        </div>
+        
+        <div class="wisdom__attribution">— Inspired by <em>The Psychology of Money</em> by Morgan Housel &amp; Warren Buffett</div>
+    </div>
 
             <!-- Footer -->
             <div class="footer">
