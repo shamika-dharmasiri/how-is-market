@@ -426,20 +426,25 @@
         <div class="hero">
             <div class="hero__badge"><span class="pulse"></span> Live Market Monitor</div>
             <h1>Market Drawdown Dashboard</h1>
-            <p class="hero__sub">Last updated: 2026-10-08 01:08 UTC</p>
+            <p class="hero__sub">Last updated: 2026-10-09 01:18 UTC</p>
         </div>
 
         <!-- Worst Drawdown / MA200 Deviation Banner -->
         
             
             
-            <div class="worst-banner level-ok">
+            
+            <div class="worst-banner level-warn">
                 <div class="worst-banner__label">Worst Drawdown Across All Instruments</div>
-                <div class="worst-banner__value val-red">-14.39%</div>
+                <div class="worst-banner__value val-red">-15.48%</div>
                 
-                <div class="worst-banner__quote">"The big thing about money is that it gives you options. The ability to
-                    wait for things to happen, and the ability to say no to things you don't want."
-                    — Morgan Housel</div>
+                <div class="worst-banner__quote">The market is down about {drawdown}%.
+
+📉 {ticker_name} ({ticker}) — {market}
+Current: ${current_price}  |  252-Day High: ${rolling_high}
+
+This is not a crisis. This is volatility.
+Corrections of...</div>
                 
             </div>
         
@@ -461,13 +466,13 @@
                         
                     </div>
                     
-                    <div class="card__drawdown val-red">-0.22%</div>
+                    <div class="card__drawdown val-red">-0.69%</div>
                     
                 </div>
                 <div class="card__stats">
                     <div>
                         <div class="card__stat-label">Price</div>
-                        <div class="card__stat-value">$7801.77</div>
+                        <div class="card__stat-value">$7765.36</div>
                     </div>
                     <div>
                         <div class="card__stat-label">252d High</div>
@@ -476,39 +481,34 @@
                     
                     <div>
                         <div class="card__stat-label">vs MA200</div>
-                        <div class="card__stat-value ">+7.7%</div>
+                        <div class="card__stat-value ">+7.2%</div>
                     </div>
                     
                     <div>
                         <div class="card__stat-label">As Of</div>
-                        <div class="card__stat-value">2026-10-07</div>
+                        <div class="card__stat-value">2026-10-08</div>
                     </div>
                 </div>
             </div>
             
             
             
-            
             <div class="card" id="card-IXIC">
-                <div class="card__indicator sell-warn"></div>
+                <div class="card__indicator ok"></div>
                 <div class="card__header">
                     <div>
                         <div class="card__ticker">^IXIC</div>
                         <div class="card__name">NASDAQ Composite</div>
                         
-                        <div class="sell-signal-badge ">
-                            ⚠ Be Fearful
-                        </div>
-                        
                     </div>
                     
-                    <div class="card__drawdown val-red">-0.22%</div>
+                    <div class="card__drawdown val-red">-1.47%</div>
                     
                 </div>
                 <div class="card__stats">
                     <div>
                         <div class="card__stat-label">Price</div>
-                        <div class="card__stat-value">$27538.69</div>
+                        <div class="card__stat-value">$27193.34</div>
                     </div>
                     <div>
                         <div class="card__stat-label">252d High</div>
@@ -517,12 +517,12 @@
                     
                     <div>
                         <div class="card__stat-label">vs MA200</div>
-                        <div class="card__stat-value val-yellow">+11.1%</div>
+                        <div class="card__stat-value ">+9.6%</div>
                     </div>
                     
                     <div>
                         <div class="card__stat-label">As Of</div>
-                        <div class="card__stat-value">2026-10-07</div>
+                        <div class="card__stat-value">2026-10-08</div>
                     </div>
                 </div>
             </div>
@@ -538,13 +538,13 @@
                         
                     </div>
                     
-                    <div class="card__drawdown val-red">-5.83%</div>
+                    <div class="card__drawdown val-red">-5.74%</div>
                     
                 </div>
                 <div class="card__stats">
                     <div>
                         <div class="card__stat-label">Price</div>
-                        <div class="card__stat-value">$51179.87</div>
+                        <div class="card__stat-value">$51231.64</div>
                     </div>
                     <div>
                         <div class="card__stat-label">252d High</div>
@@ -553,12 +553,12 @@
                     
                     <div>
                         <div class="card__stat-label">vs MA200</div>
-                        <div class="card__stat-value ">+1.7%</div>
+                        <div class="card__stat-value ">+1.8%</div>
                     </div>
                     
                     <div>
                         <div class="card__stat-label">As Of</div>
-                        <div class="card__stat-value">2026-10-07</div>
+                        <div class="card__stat-value">2026-10-08</div>
                     </div>
                 </div>
             </div>
@@ -574,13 +574,13 @@
                         
                     </div>
                     
-                    <div class="card__drawdown val-green">+8.52%</div>
+                    <div class="card__drawdown val-red">-0.26%</div>
                     
                 </div>
                 <div class="card__stats">
                     <div>
                         <div class="card__stat-label">Price</div>
-                        <div class="card__stat-value">$716.2</div>
+                        <div class="card__stat-value">$714.34</div>
                     </div>
                     <div>
                         <div class="card__stat-label">252d High</div>
@@ -589,12 +589,12 @@
                     
                     <div>
                         <div class="card__stat-label">vs MA200</div>
-                        <div class="card__stat-value ">+8.5%</div>
+                        <div class="card__stat-value ">+8.2%</div>
                     </div>
                     
                     <div>
                         <div class="card__stat-label">As Of</div>
-                        <div class="card__stat-value">2026-10-06</div>
+                        <div class="card__stat-value">2026-10-07</div>
                     </div>
                 </div>
             </div>
@@ -615,13 +615,13 @@
                         
                     </div>
                     
-                    <div class="card__drawdown val-yellow">+13.59%</div>
+                    <div class="card__drawdown val-red">-0.25%</div>
                     
                 </div>
                 <div class="card__stats">
                     <div>
                         <div class="card__stat-label">Price</div>
-                        <div class="card__stat-value">$759.66</div>
+                        <div class="card__stat-value">$757.73</div>
                     </div>
                     <div>
                         <div class="card__stat-label">252d High</div>
@@ -630,12 +630,12 @@
                     
                     <div>
                         <div class="card__stat-label">vs MA200</div>
-                        <div class="card__stat-value val-yellow">+13.6%</div>
+                        <div class="card__stat-value val-yellow">+13.2%</div>
                     </div>
                     
                     <div>
                         <div class="card__stat-label">As Of</div>
-                        <div class="card__stat-value">2026-10-06</div>
+                        <div class="card__stat-value">2026-10-07</div>
                     </div>
                 </div>
             </div>
@@ -651,13 +651,13 @@
                         
                     </div>
                     
-                    <div class="card__drawdown val-red">-0.21%</div>
+                    <div class="card__drawdown val-red">-0.6%</div>
                     
                 </div>
                 <div class="card__stats">
                     <div>
                         <div class="card__stat-label">Price</div>
-                        <div class="card__stat-value">$382.54</div>
+                        <div class="card__stat-value">$381.03</div>
                     </div>
                     <div>
                         <div class="card__stat-label">252d High</div>
@@ -666,12 +666,12 @@
                     
                     <div>
                         <div class="card__stat-label">vs MA200</div>
-                        <div class="card__stat-value ">+8.1%</div>
+                        <div class="card__stat-value ">+7.5%</div>
                     </div>
                     
                     <div>
                         <div class="card__stat-label">As Of</div>
-                        <div class="card__stat-value">2026-10-06</div>
+                        <div class="card__stat-value">2026-10-07</div>
                     </div>
                 </div>
             </div>
@@ -687,13 +687,13 @@
                         
                     </div>
                     
-                    <div class="card__drawdown val-red">-2.46%</div>
+                    <div class="card__drawdown val-red">-2.83%</div>
                     
                 </div>
                 <div class="card__stats">
                     <div>
                         <div class="card__stat-label">Price</div>
-                        <div class="card__stat-value">$231.66</div>
+                        <div class="card__stat-value">$230.78</div>
                     </div>
                     <div>
                         <div class="card__stat-label">252d High</div>
@@ -702,12 +702,12 @@
                     
                     <div>
                         <div class="card__stat-label">vs MA200</div>
-                        <div class="card__stat-value ">+4.0%</div>
+                        <div class="card__stat-value ">+3.6%</div>
                     </div>
                     
                     <div>
                         <div class="card__stat-label">As Of</div>
-                        <div class="card__stat-value">2026-10-06</div>
+                        <div class="card__stat-value">2026-10-07</div>
                     </div>
                 </div>
             </div>
@@ -730,13 +730,13 @@
                         
                     </div>
                     
-                    <div class="card__drawdown val-red">-6.25%</div>
+                    <div class="card__drawdown val-red">-6.22%</div>
                     
                 </div>
                 <div class="card__stats">
                     <div>
                         <div class="card__stat-label">Price</div>
-                        <div class="card__stat-value">$8692.1</div>
+                        <div class="card__stat-value">$8694.9</div>
                     </div>
                     <div>
                         <div class="card__stat-label">252d High</div>
@@ -750,7 +750,7 @@
                     
                     <div>
                         <div class="card__stat-label">As Of</div>
-                        <div class="card__stat-value">2026-10-08</div>
+                        <div class="card__stat-value">2026-10-09</div>
                     </div>
                 </div>
             </div>
@@ -766,13 +766,13 @@
                         
                     </div>
                     
-                    <div class="card__drawdown val-red">-0.35%</div>
+                    <div class="card__drawdown val-red">-0.64%</div>
                     
                 </div>
                 <div class="card__stats">
                     <div>
                         <div class="card__stat-label">Price</div>
-                        <div class="card__stat-value">$164.33</div>
+                        <div class="card__stat-value">$163.84</div>
                     </div>
                     <div>
                         <div class="card__stat-label">252d High</div>
@@ -781,12 +781,12 @@
                     
                     <div>
                         <div class="card__stat-label">vs MA200</div>
-                        <div class="card__stat-value ">+7.1%</div>
+                        <div class="card__stat-value ">+6.8%</div>
                     </div>
                     
                     <div>
                         <div class="card__stat-label">As Of</div>
-                        <div class="card__stat-value">2026-10-08</div>
+                        <div class="card__stat-value">2026-10-09</div>
                     </div>
                 </div>
             </div>
@@ -802,13 +802,13 @@
                         
                     </div>
                     
-                    <div class="card__drawdown val-red">-1.14%</div>
+                    <div class="card__drawdown val-red">-2.21%</div>
                     
                 </div>
                 <div class="card__stats">
                     <div>
                         <div class="card__stat-label">Price</div>
-                        <div class="card__stat-value">$94.91</div>
+                        <div class="card__stat-value">$93.88</div>
                     </div>
                     <div>
                         <div class="card__stat-label">252d High</div>
@@ -817,12 +817,12 @@
                     
                     <div>
                         <div class="card__stat-label">vs MA200</div>
-                        <div class="card__stat-value ">+4.0%</div>
+                        <div class="card__stat-value ">+2.8%</div>
                     </div>
                     
                     <div>
                         <div class="card__stat-label">As Of</div>
-                        <div class="card__stat-value">2026-10-08</div>
+                        <div class="card__stat-value">2026-10-09</div>
                     </div>
                 </div>
             </div>
@@ -836,27 +836,22 @@
             
             
             
-            
             <div class="card" id="card-ES3_SI">
-                <div class="card__indicator sell-warn"></div>
+                <div class="card__indicator ok"></div>
                 <div class="card__header">
                     <div>
                         <div class="card__ticker">ES3.SI</div>
                         <div class="card__name">SPDR Straits Times Index ETF</div>
                         
-                        <div class="sell-signal-badge ">
-                            ⚠ Be Fearful
-                        </div>
-                        
                     </div>
                     
-                    <div class="card__drawdown val-red">-1.9%</div>
+                    <div class="card__drawdown val-red">-6.35%</div>
                     
                 </div>
                 <div class="card__stats">
                     <div>
                         <div class="card__stat-label">Price</div>
-                        <div class="card__stat-value">$5.77</div>
+                        <div class="card__stat-value">$5.51</div>
                     </div>
                     <div>
                         <div class="card__stat-label">252d High</div>
@@ -865,12 +860,12 @@
                     
                     <div>
                         <div class="card__stat-label">vs MA200</div>
-                        <div class="card__stat-value val-yellow">+11.7%</div>
+                        <div class="card__stat-value ">+6.7%</div>
                     </div>
                     
                     <div>
                         <div class="card__stat-label">As Of</div>
-                        <div class="card__stat-value">2026-10-06</div>
+                        <div class="card__stat-value">2026-10-09</div>
                     </div>
                 </div>
             </div>
@@ -884,8 +879,9 @@
             
             
             
+            
             <div class="card" id="card-CSE_ASPI">
-                <div class="card__indicator ok"></div>
+                <div class="card__indicator warn"></div>
                 <div class="card__header">
                     <div>
                         <div class="card__ticker">CSE_ASPI</div>
@@ -893,13 +889,13 @@
                         
                     </div>
                     
-                    <div class="card__drawdown val-red">-14.39%</div>
+                    <div class="card__drawdown val-red">-15.48%</div>
                     
                 </div>
                 <div class="card__stats">
                     <div>
                         <div class="card__stat-label">Price</div>
-                        <div class="card__stat-value">$20517.55</div>
+                        <div class="card__stat-value">$20257.14</div>
                     </div>
                     <div>
                         <div class="card__stat-label">252d High</div>
@@ -908,12 +904,12 @@
                     
                     <div>
                         <div class="card__stat-label">vs MA200</div>
-                        <div class="card__stat-value ">-7.4%</div>
+                        <div class="card__stat-value ">-8.5%</div>
                     </div>
                     
                     <div>
                         <div class="card__stat-label">As Of</div>
-                        <div class="card__stat-value">2026-10-07</div>
+                        <div class="card__stat-value">2026-10-08</div>
                     </div>
                 </div>
             </div>
@@ -929,13 +925,13 @@
                         
                     </div>
                     
-                    <div class="card__drawdown val-red">-13.84%</div>
+                    <div class="card__drawdown val-red">-14.64%</div>
                     
                 </div>
                 <div class="card__stats">
                     <div>
                         <div class="card__stat-label">Price</div>
-                        <div class="card__stat-value">$5816.4</div>
+                        <div class="card__stat-value">$5762.56</div>
                     </div>
                     <div>
                         <div class="card__stat-label">252d High</div>
@@ -944,12 +940,12 @@
                     
                     <div>
                         <div class="card__stat-label">vs MA200</div>
-                        <div class="card__stat-value ">-5.6%</div>
+                        <div class="card__stat-value ">-6.5%</div>
                     </div>
                     
                     <div>
                         <div class="card__stat-label">As Of</div>
-                        <div class="card__stat-value">2026-10-07</div>
+                        <div class="card__stat-value">2026-10-08</div>
                     </div>
                 </div>
             </div>
@@ -964,15 +960,15 @@
         <div class="wisdom__title">Emotional Preparedness</div>
         
         <div class="wisdom__text">
-            The strongest instruments are trading <strong>+13.59% above their 200-day moving average</strong>.
+            The market is down -15.48%. This is not a crisis. This is volatility.
             <br><br>
-            <em>"Be greedy when others are fearful, be fearful when others are greedy."</em>
+            Corrections of this size happen regularly in long-term market history.
+            Nothing is broken. This is where disciplined investors begin adding — not aggressively,
+            not emotionally — just steadily.
             <br><br>
-            Markets are running above trend. Sentiment is positive. This is not a time to panic — but it is
-            a moment to pause and review your allocation.
+            You have 6 months of expenses saved. You are investing for the long term. You expect volatility.
             <br><br>
-            Consider trimming positions that have grown overweight. Maintain your cash buffer.
-            <br><strong>Stay disciplined. The plan works in both directions.</strong>
+            <strong>Deploy a small, pre-defined allocation. No heroics. No hesitation. Just process.</strong>
         </div>
         
         <div class="wisdom__attribution">— Inspired by <em>The Psychology of Money</em> by Morgan Housel &amp; Warren Buffett</div>
